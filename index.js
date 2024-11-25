@@ -1,11 +1,5 @@
 
-// console.log("Starting")
 
-// function start() {
-//   console.log("Started")
-// }
-
-// module.exports=start
 
 
 const express = require('express');
@@ -23,7 +17,7 @@ mongoose.connect("mongodb+srv://hassanola:hassanabdl10@cluster0.unvq3.mongodb.ne
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.log('Error connecting to MongoDB:', err));
 
-// mongoose.connect('mongodb+srv://hassanola:hassanabdl10@cluster0.unvq3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',()=>{
+// mongoose.connect('your MongoDB url',()=>{
 //     console.log('Connected to mongodb');
 // });
 
@@ -166,110 +160,4 @@ server.listen(8080,()=>{
 
 
 
-
-// const names = ['hassan','ali','omar','eiad','ziad',"samer"]
-
-// io.on('connection',(client)=>{
-//     console.log('User connected');
-//     console.log(client.id)
-   
-//     client.emit("userdata",{"id":client.id,"username":names[randomInt(0, names.length)]});
-
-//     client.on('disconnect',()=>{
-//         console.log('User disconnected');
-//     })
-
-//     client.on('message',(message)=>{
-//         console.log(message);
-
-//     io.emit('res',{"id": client.id,"msg": message.msg, "username":message.username});
-    
-// })
-
-//    //client.broadcast.emit('message',{"id": client.id, "msg": "Welcome to the chat"}); // send message to all clients except the sender
-//    // io.to(client.id).emit('message',{"id": client.id, "msg": "Welcome to the chat"}); // send message to specific client
-    
-// })
-
-// server.listen(8080,()=>{
-//     console.log('Server is running on port 8080');
-// })
-
-
-// // get request
-// app.get('/home', (req, res) => {
-//    // res.send('<h1>Welcome Home</h1>');
-// //    res.json({
-// //     success: true,
-// //     message: 'Welcome Home',
-// //     "name": "ali"
-// // })
-
-//  try{
-//     user.find()
-//     .then((result)=>{
-//         res.json({
-//             success: true,
-//             message: 'Welcome Home',
-//             "data": result
-//         });
-//     })
-//  }catch(err){
-//     res.json({
-//         success: false,
-//         message: 'Welcome Home',
-//         "error": err
-//     });
-//  }
-
-// });
-
-
-// // post request
-// app.post('/home', (req, res) => {
-//     // console.log(req.body);
-//     // if (!req.body.name) {
-//     //     return res.status(400).json({
-//     //         success: false,
-//     //         message: 'Name is required'
-//     //     });
-//     // }
-//     // res.json({
-//     //     success: true,
-//     //     message: 'Welcome Home',
-//     //     "name": req.body.name
-//     // });
-
-//    if (!req.body.name||!req.body.age) {
-//         return res.status(400).json({
-//             success: false,
-//             message: 'Name and age are required'
-//         });
-//     }
-    
-//     else{
-      
-
-//        const userobj=new user({
-//             name: req.body.name,
-//             age: req.body.age
-//         })
-//         userobj.save()
-//         .then((result)=>{
-//             res.json({
-//                 success: true,
-//                 message: 'Welcome Home',
-//                 "name": req.body.name,
-//                 "age": req.body.age
-//             });
-//         })
-//     } 
-   
-// });
-
-
-// // app.listen(8080, () => {
-    
-// //     console.log('Server is running on port 8080');
-// // })
 
