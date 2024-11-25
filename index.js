@@ -13,13 +13,10 @@ const Room = require('./models/room');
 
 // connect to mongodb
 
-mongoose.connect("mongodb+srv://hassanola:hassanabdl10@cluster0.unvq3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("your MongoDB url", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.log('Error connecting to MongoDB:', err));
 
-// mongoose.connect('your MongoDB url',()=>{
-//     console.log('Connected to mongodb');
-// });
 
 const app = express();
 
